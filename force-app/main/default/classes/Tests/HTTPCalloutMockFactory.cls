@@ -1,3 +1,14 @@
+/*********************************************************************************
+Class Name      : HTTPCalloutMockFactory
+Description     : Mock factory to test HTTP callouts from App
+Created By      : Sebastian Torres
+Created Date    : 2021-07-13  
+Modification Log: 
+---------------------------------------------------------------------------------- 
+Developer                   Date                   Description
+----------------------------------------------------------------------------------
+Sebastian                 2021-07-13               Initial version
+*********************************************************************************/
 public class HTTPCalloutMockFactory implements HttpCalloutMock {
     
   protected Integer code;

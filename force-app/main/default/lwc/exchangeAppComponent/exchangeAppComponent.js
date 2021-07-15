@@ -7,10 +7,16 @@ export default class ExchangeAppComponent extends LightningElement {
     @track isLoading = false;
     @track amount;
 
+    handleNameChange(event) {
+        this.amount=event.target.value;
+        console.log('The Amount is changed to: ' + this.amount);
+    }
+
     callContinuation() {
         this.isLoading = true;
         //this.imperativeContinuation = [];
-        startRequestImperative({value: '$amount'})
+        console.log('Calling Continuation for this amount: ' + this.amount);
+        startRequestImperative({value: this.amount})
         .then(result => {
             this.imperativeContinuation = result;
             this.isLoading = false;

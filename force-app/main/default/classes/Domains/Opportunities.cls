@@ -1,3 +1,14 @@
+/*********************************************************************************
+Class Name      : Opportunities
+Description     : Main Domain class implemented for Opportunity domain layer
+Created By      : Sebastian Torres
+Created Date    : 2021-07-13  
+Modification Log: 
+---------------------------------------------------------------------------------- 
+Developer                   Date                   Description
+----------------------------------------------------------------------------------
+Sebastian                 2021-07-13               Initial version
+*********************************************************************************/
 public inherited sharing class Opportunities extends ApplicationDomain {
     
     public Opportunities(List<Opportunity> opps) {
@@ -11,17 +22,13 @@ public inherited sharing class Opportunities extends ApplicationDomain {
 	}	
     
     public override void onAfterInsert()
-    {
-        
-        ExchangeService.asyncApplyExchangeRatesinOpps(getApplicableExchangeOpps());
-        
+    {    
+        ExchangeService.asyncApplyExchangeRatesinOpps(getApplicableExchangeOpps());     
     }
     
     public override void onAfterUpdate(Map<Id,SObject> existingRecords)
     {
-        system.debug('Entering on After insert in Opportunities domain');
         ExchangeService.asyncApplyExchangeRatesinOpps(getApplicableExchangeOpps(existingRecords));
-        //ExchangeService.applyExchangeRatesinOpps(getApplicableExchangeOpps());
     }
     
      public void updateAmounts(fflib_ISObjectUnitOfWork uow, Map<Double, ExchangeService.ProvisionalResult> rates) 

@@ -1,3 +1,14 @@
+/*********************************************************************************
+Class Name      : Application
+Description     : Main Application Class
+Created By      : Sebastian Torres
+Created Date    : 2021-07-12 
+Modification Log: 
+---------------------------------------------------------------------------------- 
+Developer                   Date                   Description
+----------------------------------------------------------------------------------
+Sebastian                 2021-07-12              Initial version
+*********************************************************************************/
 public class Application {
     // Configure and create the UnitOfWorkFactory for this Application
 	public static final fflib_Application.UnitOfWorkFactory UnitOfWork = 
@@ -26,7 +37,7 @@ public static final fflib_Application.DomainFactory Domain =
         Application.Selector,
         // Map SObjectType to Domain Class Constructors 
         new Map<SObjectType, Type> {
-                //To be implemented 
+                Opportunity.SObjectType => Opportunity.Constructor.class
             });                    
        
 // Customised Service factory to support developer overrides via Custom Metadata (see Chapter 5)      

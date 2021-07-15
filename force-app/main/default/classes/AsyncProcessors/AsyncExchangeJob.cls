@@ -1,13 +1,13 @@
 /*********************************************************************************
 Class Name      : AsyncExchangeJob
-Description     : Async support class
+Description     : Async Job class used for the exchange app as instance used in factory and strategy pattern
 Created By      : Sebastian Torres
-Created Date    : 2021-04-14 
+Created Date    : 2021-07-13  
 Modification Log: 
 ---------------------------------------------------------------------------------- 
 Developer                   Date                   Description
 ----------------------------------------------------------------------------------
-Sebastian                 2021-04-14              Initial version
+Sebastian                 2021-07-13               Initial version
 *********************************************************************************/
 public class AsyncExchangeJob extends AsyncJob {
     

@@ -1,3 +1,14 @@
+/*********************************************************************************
+Class Name      : OpportunitiesSelector
+Description     : Main Selector class for selector layer, includes al query methods used by application
+Created By      : Sebastian Torres
+Created Date    : 2021-07-13  
+Modification Log: 
+---------------------------------------------------------------------------------- 
+Developer                   Date                   Description
+----------------------------------------------------------------------------------
+Sebastian                 2021-07-13               Initial version
+*********************************************************************************/
 public inherited sharing class OpportunitiesSelector extends fflib_SObjectSelector {
 
     public List<Schema.SObjectField> getSObjectFieldList() {

@@ -3,12 +3,12 @@ Class Name      : Async_QueueableProcessor
 Description     : Main queuable service class, provides queuable support based on the async request object
         Can provide also callout support for integrations
 Created By      : Sebastian Torres
-Created Date    : 2021-04-14 
+Created Date    : 2021-07-13 
 Modification Log: 
 ---------------------------------------------------------------------------------- 
 Developer                   Date                   Description
 ----------------------------------------------------------------------------------
-Sebastian                 2021-04-14              Initial version
+Sebastian                 2021-07-13              Initial version
 *********************************************************************************/
 public without sharing class Async_QueueableProcessor implements queueable, Database.AllowsCallouts {
     
@@ -17,7 +17,7 @@ public without sharing class Async_QueueableProcessor implements queueable, Data
 
     public void execute(QueueableContext context)
     {
-      //if(!Credomatic_Application.appEnabled) return; // On/off switch
+      //if(!Application.appEnabled) return; // On/off switch
       List<AsyncRequest__c> requests;
       try
       {

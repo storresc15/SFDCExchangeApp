@@ -189,12 +189,12 @@ public abstract with sharing class fflib_SObjectSelector
      *
      * @depricated See newQueryFactory
      **/
-    public fflib_StringBuilder.CommaDelimitedListBuilder getFieldListBuilder()
+    /*public fflib_StringBuilder.CommaDelimitedListBuilder getFieldListBuilder()
     {
         return 
             new fflib_StringBuilder.CommaDelimitedListBuilder(
                 new List<String>(newQueryFactory().getSelectedFields()));
-    }
+    }*/
 
     /**
      * Use this method to override the default FieldListBuilder (created on demand via getFieldListBuilder) with a custom one, 
@@ -202,20 +202,20 @@ public abstract with sharing class fflib_SObjectSelector
      *
      * @depricated See newQueryFactory
      **/    
-    public void setFieldListBuilder(fflib_StringBuilder.FieldListBuilder fieldListBuilder)
+   /* public void setFieldListBuilder(fflib_StringBuilder.FieldListBuilder fieldListBuilder)
     {
         // TODO: Consider if given the known use cases for this (dynamic selector optomisation) if it's OK to leave this as a null operation 
-    }
+    }*/
 
     /**
      * Returns in string form a comma delimted list of fields as defined via getSObjectFieldList and optionally getSObjectFieldSetList
      *
      * @depricated See newQueryFactory
      **/    
-    public String getFieldListString()
+   /* public String getFieldListString()
     {
         return getFieldListBuilder().getStringValue();
-    }
+    }*/
     
     /**
      * Returns in string form a comma delimted list of fields as defined via getSObjectFieldList and optionally getSObjectFieldSetList
@@ -223,10 +223,10 @@ public abstract with sharing class fflib_SObjectSelector
      *
      * @depricated See newQueryFactory
      **/    
-    public String getRelatedFieldListString(String relation)
+    /*public String getRelatedFieldListString(String relation)
     {
         return getFieldListBuilder().getStringValue(relation + '.');
-    }
+    }*/
 
     /**
      * Returns the string representaiton of the SObject this selector represents
@@ -267,12 +267,12 @@ public abstract with sharing class fflib_SObjectSelector
      *
      * @depricated If you utilise the newQueryFactory method this is automatically done for you (unless disabled by the selector) 
      **/
-    public void assertIsAccessible()
+   /*public void assertIsAccessible()
     {
         if(!getSObjectType().getDescribe().isAccessible())
            throw new fflib_SObjectDomain.DomainException(
                 'Permission to access an ' + getSObjectType().getDescribe().getName() + ' denied.');       
-    }
+    }*/
 
     /**
      * Public acccess for the getSObjectType during Mock registration 

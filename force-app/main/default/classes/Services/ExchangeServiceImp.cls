@@ -1,3 +1,14 @@
+/*********************************************************************************
+Class Name      : ExchangeServiceImp
+Description     : Implementation class of the ExchangeService class methods
+Created By      : Sebastian Torres
+Created Date    : 2021-07-13  
+Modification Log: 
+---------------------------------------------------------------------------------- 
+Developer                   Date                   Description
+----------------------------------------------------------------------------------
+Sebastian                 2021-07-13               Initial version
+*********************************************************************************/
 public inherited sharing class ExchangeServiceImp implements IExchangeService {
     
     public void applyExchangeRatesinOpps(Set<Id> oppIds)

@@ -1,13 +1,13 @@
 /*********************************************************************************
 Class Name      : ExchangeService
-Description     : 
+Description     : Main Exchange Service class, agnostic service layer to be called
 Created By      : Sebastian Torres
-Created Date    : 2021-04-14 
+Created Date    : 2021-07-13  
 Modification Log: 
 ---------------------------------------------------------------------------------- 
 Developer                   Date                   Description
 ----------------------------------------------------------------------------------
-Sebastian                 2021-04-14              Initial version
+Sebastian                 2021-07-13               Initial version
 *********************************************************************************/
 public with sharing class ExchangeService {
     
