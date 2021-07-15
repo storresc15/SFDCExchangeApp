@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Exchange App">
+             <lightning-input class="slds-m-bottom_small" label="Amount" value={amount}></lightning-input>
+            <lightning-button label="Get Rates" onclick={callContinuation}></lightning-button>
+
+            <div class="slds-is-relative">
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                    </lightning-spinner>
+                </template>
+            </div>       
+        
+        <template if:true={imperativeContinuation}>
+                <div class="slds-col">
+                    Imperative result: </br>
+                    USD:{imperativeContinuation.USD}</br>
+                    CAD:{imperativeContinuation.CAD}</br>
+                    MXN:{imperativeContinuation.MXN}
+                </div>
+        </template> 
+
+
+    </lightning-card>
+
+
+</template>

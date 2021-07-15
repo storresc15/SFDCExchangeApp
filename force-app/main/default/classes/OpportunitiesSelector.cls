@@ -20,4 +20,8 @@ public inherited sharing class OpportunitiesSelector extends fflib_SObjectSelect
     public List<Opportunity> selectById(Set<Id> oppIds) {
 		return (List<Opportunity>) selectSObjectsById(oppIds);
 	}
+    
+    public List<Opportunity> selectByIdForCallouts(List<Id> oppIds, integer allowedCallouts) {
+        return [SELECT ID, NAME, ACCOUNTID, CADAmount__c, MXNAmount__c, USDAmount__c, Amount FROM Opportunity WHERE ID in:oppIds LIMIT :allowedCallouts];
+	}
 }
