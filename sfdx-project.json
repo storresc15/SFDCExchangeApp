@@ -1,12 +1,19 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "ExchangeAppST",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "name": "ExchangeAppST",
+    "namespace": "exappst",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "ExchangeAppST": "0Ho5e000000oMNoCAM",
+        "ExchangeAppST@0.1.0-1": "04t5e0000006eJrAAI"
     }
-  ],
-  "name": "ExchangeAppST",
-  "namespace": "exappst",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
 }
